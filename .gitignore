@@ -2,3 +2,5 @@ task2/server/CMakeFiles/
 task2/server/cmake_install.cmake
 task2/server/CMakeCache.txt
 task2/server/Makefile
+task3/node_modules/
+task3/pnpm-lock.yaml

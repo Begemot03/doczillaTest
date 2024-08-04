@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./lib/jquery-ui-1.13.3/jquery-ui.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css">
+    <title>TODO List</title>
+</head>
+<body>
+    <div class="app">
+        <header class="header">Список дел</header>
+        <div class="todo-list">
+            <div class="todo-list__item">
+                <div class="lds-dual-ring"></div>
+            </div>
+            <!-- <div class="todo-list__item">
+                <div class="todo-list__row">
+                    <div class="todo-list__content">
+                        <div class="todo-list__title">Купить колбасу</div>
+                        <div class="todo-list__short-desc">Купить колбасуКупить колб</div>
+                    </div>
+                    <div class="todo-list__tools">
+                        <div class="status">
+                            <span class="status__checkmark"></span>
+                            <input type="checkbox" name="status" checked="checked">
+                        </div>
+                        <div class="todo-list__create-date">08.05.2022 00:00</div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <div class="tool-bar">
+            <div class="tool" data-tool="sort">
+                <div class="tool__name">Сортировать по дате</div>
+            </div>
+            <div class="tool" data-tool="today">
+                <div class="tool__name">Сегодня</div>
+            </div>
+            <div class="tool" data-tool="week">
+                <div class="tool__name">На неделю</div>
+            </div>
+            <div class="tool" data-tool="sort-status">
+                <div class="tool__name">Только невыполненные</div>
+                <div class="status">
+                    <span class="status__checkmark"></span>
+                    <input type="checkbox" name="status" checked="checked">
+                </div>
+            </div>
+            <div class="tool" data-tool="daterange">
+                <input type="text" id="input1" value="" hidden>
+                <input type="text" id="input2" value="" hidden>
+            </div>
+            <div class="tool" data-tool="search">
+                <input type="text" placeholder="Поиск задачи">
+                <div class="search__list hidden">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модалка для добавления студента -->
+    <div class="modal hidden">
+        <div class="modal__content">
+            <div class="modal__title">Название</div>
+            <div class="modal_info">
+                <div class="modal__date">08.05.2022 00:00</div>
+                <div class="status">
+                    <span class="status__checkmark"></span>
+                    <input type="checkbox" name="status" checked="checked">
+                </div>
+            </div>
+            
+            <div class="modal__body">
+                sdfsdfsdfsdfd
+            </div>
+            <div class="modal__footer">
+                <button type="button" class="btn btn-success">Готово</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./lib/jquery-ui-1.13.3/jquery-ui.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
