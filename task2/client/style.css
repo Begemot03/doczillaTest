@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --tool-clr: #FDCA40;
+    --bg-clr: #E6E8E6;
+    --txt-clr: rgb(47, 55, 71);
+    --success-clr: #3772FF;
+    --primary-clr: #DF2935;
+    --btn-clr: #FFF;
+    --comp--bg-clr: #fff;
+
+    --brd-sz: 0.25rem;
+    --top-offset: 5rem;
+
+    --comp-shadow: 0px 0px 0.5px 0px rgba(47, 55, 71, 0.2);
+
+    --header-sz: 2rem;
+    --card-title-sz: 1.5rem;
+    --card-body-sz: 1rem;
+    --col-name-sz: 1.2rem;
+    --btn-sz: 1.2rem;
+
+    --modal-title-sz: 1.5rem;
+    --modal-body-sz: 1rem;
+
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--bg-clr);
+}
+
+.app {
+    margin-inline: auto;
+    max-width: 1260px;
+    width: 100%;
+    padding-inline: 0.5rem;
+    color: var(--txt-clr);
+}
+
+.header {
+    padding: 2rem 3rem;
+    background-color: var(--comp--bg-clr);
+    box-shadow: var(--comp-shadow);
+    border-bottom-left-radius: 1.25rem;
+    border-bottom-right-radius: 1.25rem;
+    font-size: var(--header-sz);
+    font-weight: 500;
+}
+
+.student-list {
+    margin-top: var(--top-offset);
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+}
+
+.card {
+    border-radius: 1.25rem;
+    padding: 1.2rem 1.5rem;
+    background-color: var(--comp--bg-clr);
+    box-shadow: var(--comp-shadow);
+}
+
+.card__title {
+    font-size: var(--card-title-sz);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.card__body {
+    font-size: var(--card-body-sz);
+    font-weight: 400;
+}
+
+.card__body:has(+.card__footer) {
+    margin-bottom: 1rem;
+}
+
+/* .card__footer {
+
+} */
+
+.card__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card__col {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.5rem 0;
+}
+
+.col__name {
+    font-size: var(--col-name-sz);
+    font-weight: 400;
+}
+
+.item {
+    padding: 0.5rem 0.8rem;
+    border-radius: 1.25rem;
+    background-color: var(--bg-clr);
+    box-shadow: var(--comp-shadow);
+}
+
+.btn {
+    outline: none;
+    box-shadow: var(--comp-shadow);
+    padding: 0.8rem 1rem;
+    font-size: var(--btn-sz);
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all;
+}
+
+.btn:hover {
+    filter: brightness(90%);
+}
+
+.btn-primary {
+    background-color: var(--primary-clr);
+    color: var(--btn-clr);
+}
+
+.btn-success {
+    background-color: var(--success-clr);
+    color: var(--btn-clr);
+}
+
+.tool-bar {
+    position: fixed;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    padding: 0.8rem;
+    background-color: var(--comp--bg-clr);
+    border-radius: 1.25rem;
+}
+
+.tool {
+    position: relative;
+    margin-top: 1rem;
+}
+
+.tool:first-child {
+    margin-top: 0;
+}
+
+.tool__name {
+    position: absolute;
+    top: 50%;
+    right: -50%;
+    width: max-content;
+    transform: translate(100%, -50%);
+    padding: 0.5rem 0.8rem;
+    background-color: var(--comp--bg-clr);
+    box-shadow: var(--comp-shadow);
+    transform-origin: top left;
+    border-radius: 1.25rem;
+    display: none;
+}
+
+.tool__name:has(+.tool__icon:hover)
+{
+    display: block;
+}
+
+.tool__icon {
+    cursor: pointer;
+    padding: 0.5rem 0.8rem;
+    box-shadow: var(--comp-shadow);
+    border-radius: 0.5rem;
+    vertical-align: middle;
+    background-color: var(--tool-clr);
+    transition: all;
+}
+
+.tool__icon:hover {
+    filter: brightness(90%);
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #3333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal__content {
+    position: relative;
+    padding: 1.5rem;
+    background-color: var(--comp--bg-clr);
+    border-radius: 1.25rem;
+}
+
+.modal__title {
+    font-size: var(--modal-title-sz);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.modal__body:has(+.modal__footer) {
+    margin-bottom: 1rem;
+}
+
+.modal__body {
+    font-size: var(--modal-body-sz);
+}
+
+.form {
+    width: 100%;
+}
+
+.form__input {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.form__input input {
+    outline: none;
+    border: none;
+}

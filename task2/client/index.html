@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Журнул студентов</title>
+</head>
+<body>
+    <div class="app">
+        <div class="header">Журнал</div>
+        <div class="student-list">
+            <!-- <div class="card">
+                <div class="card__title">
+                    Петров Андрей Владимирович, #1
+                </div>
+                <div class="card__body">
+                    <div class="card__row">
+                        <div class="card__col">
+                            <div class="col__name">Имя:</div>
+                        </div>
+                        <div class="card__col">
+                            <div class="item">Андрей</div>
+                        </div>
+                    </div>
+                    <div class="card__row">
+                        <div class="card__col">
+                            <div class="col__name">Фамилия:</div>
+                        </div>
+                        <div class="card__col">
+                            <div class="item">Петров</div>
+                        </div>
+                    </div>
+                    <div class="card__row">
+                        <div class="card__col">
+                            <div class="col__name">Отчество:</div>
+                        </div>
+                        <div class="card__col">
+                            <div class="item">Владимирович</div>
+                        </div>
+                    </div>
+                    <div class="card__row">
+                        <div class="card__col">
+                            <div class="col__name">Дата рождения:</div>
+                        </div>
+                        <div class="card__col">
+                            <div class="item">13.04.2003</div>
+                        </div>
+                    </div>
+                    <div class="card__row">
+                        <div class="card__col">
+                            <div class="col__name">Группа:</div>
+                        </div>
+                        <div class="card__col">
+                            <div class="item">4311-22</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card__footer">
+                    <button class="btn btn-primary">Удалить</button>
+                </div>
+            </div> -->
+        </div>
+        <div class="tool-bar">
+            <div class="tool">
+                <div class="tool__name">Добавить студента</div>
+                <div class="tool__icon" data-open-modal="addStudent"><span class="material-symbols-outlined">person_add</span></div>
+            </div>
+            <div class="tool">
+                <div class="tool__name">Найти по id</div>
+                <div class="tool__icon" data-open-modal="searchStudent"><span class="material-symbols-outlined">person_search</span></div>
+            </div>
+            <div class="tool">
+                <div class="tool__name">Удалить по id</div>
+                <div class="tool__icon" data-open-modal="deleteStudent"><span class="material-symbols-outlined">delete</span></div>
+            </div>
+        </div>
+        <!-- Модалка для добавления студента -->
+        <div class="modal" data-modal="addStudent">
+            <div class="modal__content">
+                <div class="modal__title">Добавить студента</div>
+                <div class="modal__body">
+                    <div class="form">
+                        <div class="form__input">
+                            <label for="name">Имя:</label>
+                            <input class="item" type="text" placeholder="Имя" name="name" id="name">
+                        </div>
+                        <div class="form__input">
+                            <label for="surname">Фамилия:</label>
+                            <input class="item" type="text" placeholder="Фамилия" name="surname" id="surname">
+                        </div>
+                        <div class="form__input">
+                            <label for="patronymic">Отчество:</label>
+                            <input class="item" type="text" placeholder="Отчество" name="patronymic" id="patronymic">
+                        </div>
+                        <div class="form__input">
+                            <label for="birthday">Дата рождения:</label>
+                            <input class="item" type="date" name="birthday" id="birthday">
+                        </div>
+                        <div class="form__input">
+                            <label for="group">Группа:</label>
+                            <input class="item" type="text" placeholder="Группа" name="group" id="group">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal__footer">
+                    <button type="button" class="btn btn-success">Добавить</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Модалка для удаления студента по id -->
+        <div class="modal" data-modal="deleteStudent">
+            <div class="modal__content">
+                <div class="modal__title">Удалить студента</div>
+                <div class="modal__body">
+                    <div class="form">
+                        <div class="form__input">
+                            <label for="id">id:</label>
+                            <input class="item" type="text" placeholder="id студента" name="id" id="id">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal__footer">
+                    <button type="button" class="btn btn-primary">Удалить</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Модалка для удаления студента по id -->
+        <div class="modal" data-modal="searchStudent">
+            <div class="modal__content">
+                <div class="modal__title">Поиск студента</div>
+                <div class="modal__body">
+                    <div class="form">
+                        <div class="form__input">
+                            <label for="id">id:</label>
+                            <input class="item" type="text" placeholder="id студента" name="id" id="id">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal__footer">
+                    <button type="button" class="btn btn-success">Найти</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
